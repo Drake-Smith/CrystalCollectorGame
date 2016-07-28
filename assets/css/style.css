@@ -1,12 +1,19 @@
+body {
+	background: #99ccff;
+	font-family: 'Karla', sans-serif;
+}
+
 .jumbotron {
 	text-align: center;
 	padding-top: 20px;
 	padding-bottom: 20px;
+	background: white;
 }
-.navbar {
-	text-align: center;
-	background: gray;
+
+.bold {
+	font-weight: 700;
 }
-.container {
-	border: 1px solid black;
+
+p {
+	font-size: 18px;
 }

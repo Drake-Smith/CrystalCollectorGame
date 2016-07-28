@@ -9,6 +9,7 @@ $(document).ready(function() {
 	var pic3;
 	var pic4;
 
+	//reset game
 	function newGame() {
 
 		//assigns random number values for the new game
@@ -18,6 +19,7 @@ $(document).ready(function() {
 		pic3 = Math.floor((Math.random() * 13) + 1);
 		pic4 = Math.floor((Math.random() * 13) + 1);
 
+		//assigns the random value of each crystal to its corresponding element id
 		$('#pic1').attr('data-num', pic1);
 		$('#pic2').attr('data-num', pic2);
 		$('#pic3').attr('data-num', pic3);
@@ -32,123 +34,23 @@ $(document).ready(function() {
 		$("#randNum").html(randNum);
 		$("#score").html(score);
 	}
+
 	newGame();
-	//function playingGame() {
-		//adds # to score when each pic is clicked on
-		// $('#pic1').click(function(){
-		// 	score += pic1;
-		//     $("#score").text(score);
-		//     if (score > randNum) {
-		// 	alert("You lose bitch!");
-		// 	losses++;
-		// 	newGame();
-		// }
-		// else if (score == randNum) {
-		// 	alert("You win bitch!");
-		// 	wins++;
-		// 	newGame();
-		// }
-		// });
 
-		// $('#pic2').click(function(){
-		//     score += pic2;
-		//     $("#score").text(score);
-		//     		    if (score > randNum) {
-		// 	alert("You lose bitch!");
-		// 	losses++;
-		// 	newGame();
-		// }
-		// else if (score == randNum) {
-		// 	alert("You win bitch!");
-		// 	wins++;
-		// 	newGame();
-		// }
-		// });
+	$('.pics').on('click', function(){
+      	score += parseInt($(this).data('num')); //this adds the crystal's random value amount to total score when crystal is clicked
+      	$("#score").text(score); //updates score on screen
 
-		// $('#pic3').click(function(){
-		//     score += pic3;
-		//     $("#score").text(score);
-		//     		    if (score > randNum) {
-		// 	alert("You lose bitch!");
-		// 	losses++;
-		// 	newGame();
-		// }
-		// else if (score == randNum) {
-		// 	alert("You win bitch!");
-		// 	wins++;
-		// 	newGame();
-		// }
-		// });
-
-		// $('#pic4').click(function(){
-		//     score += pic4;
-		//     $("#score").text(score);
-		//     		    if (score > randNum) {
-		// 	alert("You lose bitch!");
-		// 	losses++;
-		// 	newGame();
-		// }
-		// else if (score == randNum) {
-		// 	alert("You win bitch!");
-		// 	wins++;
-		// 	newGame();
-		// }
-		// });
-
-		$('.pics').on('click', function(){
-      		score += parseInt($(this).data('num'));
-      		$("#score").text(score);
-      		
-      		if (score > randNum) {
-			alert("You lose bitch!");
+      	if (score > randNum) {
+			alert("You lose! Play again!");
 			losses++;
 			newGame();
 		}
 		if (score == randNum) {
-			alert("You win bitch!");
+			alert("You win! Play again!");
 			wins++;
 			newGame();
 		}
 	});
-
-	//}
-
-		// $('.pics').click(function(){
-		// 	 if $(this).attr("id") == "pic1" {
-		// 	 	console.log(pic1);
-		// 	 }
-		// 	 else if $(this).attr("id") == "pic2" {
-		// 	 	console.log(pic2);
-		// 	 }
-		// 	 else if $(this).attr("id") == "pic3" {
-		// 	 	console.log(pic3);
-		// 	 }
-		// 	 else if $(this).attr("id") == "pic4" {
-		// 	 	console.log(pic4);
-		// 	 }
-	 		// currentScore = score += pic1;
-	 	 //    $("#score").html(score);
-	 	 //    return currentScore;
-	 	// });
-
-
-	// function gameConditionals(currentScore) {
-	// 	//if statements for reaching or surpassing the score
-		// if (score > randNum) {
-		// 	alert("You lose bitch!");
-		// 	losses++;
-		// 	newGame();
-		// }
-		// if (score == randNum) {
-		// 	alert("You win bitch!");
-		// 	wins++;
-		// 	newGame();
-		// }
-	//}
-
-	//newGame();
-	//playingGame();
-	//pic1Clicked();
-	//gameConditionals();
 });
 
