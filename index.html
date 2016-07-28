@@ -1,9 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+	<script type="text/javascript" src="assets/javascript/game.js"></script>
+
+
 	<title>Crystal Collector</title>
 </head>
+
 <body>
+	<div class="jumbotron">
+		<div class="container">
+ 			<h1> Crystal Collector </h1>
+ 		</div>
+ 	</div>
+ 	
+ 	<div class = "row">
+ 		<div class = "container">
+ 			<div class = "col-sm-6 text-center">
+	 			<h3> Random Number: <span id = "randNum"></span></h3>
+	 			<h3> Wins: <span id = "wins"></span></h3>
+	 			<h3> Losses: <span id = "losses"></span></h3>
+	 			<h3> Total Score: <span id = "score"></span></h3>
+ 			</div>
+ 
+ 		 	<div class = "col-sm-6 text-center">
+ 				<h3>Instructions</h3>
+ 				<p>Each crystal represents a random number. When you click on a crystal, the Total Score amont will update with whatever that crystal's point amount is. </p>
+ 				<p>How To Win: You win when your Total Score matches the Random Number from clicking on the crystals. If you go over, you lose.</p>
+ 			</div>
+ 		</div> 	
+ 	</div>
+ 	
+ 	
+ 	<div class = "row">
+ 		<div class = "container">
+ 			<center>
+		 		<div class = "col-sm-3">
+		 			<img class = "img-center pics" id = "pic1" src = "http://lorempixel.com/150/150/" alt = "pic1">
+		 		</div>
+		 		<div class = "col-sm-3">
+		 			<img class = "img-center pics" id = "pic2" src = "http://lorempixel.com/150/150/" alt = "pic1">
+		 		</div>
+		 		<div class = "col-sm-3">
+		 			<img class = "img-center pics" id = "pic3" src = "http://lorempixel.com/150/150/" alt = "pic1">
+		 		</div>
+		 		<div class = "col-sm-3">
+		 			<img class = "img-center pics" id = "pic4" src = "http://lorempixel.com/150/150/" alt = "pic1">
+		 		</div> 
+	 		</center>
+	 	</div>		 		 		
+ 	</div>
+ 	
+
+	<div class = "row">
+ 		<div class = "navbar navbar-fixed-bottom">
+ 			<div class="container">
+    			<div class="col-sm-12 text-center navbar-text">
+        			<p>Created by Drake Smith</p>
+    			</div>
+  			</div>
+  		</div>
+  	</div>
+
+
 
 </body>
 </html>

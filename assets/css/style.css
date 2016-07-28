@@ -1,0 +1,12 @@
+.jumbotron {
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.navbar {
+	text-align: center;
+	background: gray;
+}
+.container {
+	border: 1px solid black;
+}
